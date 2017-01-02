@@ -35,25 +35,25 @@
     const lazyloadVanillaLoader = () => {
       let lazyImagesArray = document.querySelectorAll('img[data-src]');
 
-      for (let i = 0; i < lazyImagesArray.length; i++) {
-        if (isImageInViewport(lazyImagesArray[i])) {
-          if (lazyImagesArray[i].getAttribute('data-src') !== null) {
-            lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
+      lazyImagesArray.forEach((image) => {
+        if (isImageInViewport(image)) {
+          if (image.getAttribute('data-src') !== null) {
+            image.setAttribute('src', image.getAttribute('data-src'));
 
-            lazyImagesArray[i].removeAttribute('data-src');
+            image.removeAttribute('data-src');
           }
 
-          if (lazyImagesArray[i].getAttribute('data-srcset') !== null) {
-            lazyImagesArray[i].setAttribute('srcset', lazyImagesArray[i].getAttribute('data-srcset'));
+          if (image.getAttribute('data-srcset') !== null) {
+            image.setAttribute('srcset', image.getAttribute('data-srcset'));
 
-            lazyImagesArray[i].removeAttribute('data-srcset');
+            image.removeAttribute('data-srcset');
           }
 
-          lazyImagesArray[i].setAttribute('data-loaded', true);
+          image.setAttribute('data-loaded', true);
 
-          fadeInCustom(lazyImagesArray[i]);
+          fadeInCustom(image);
         }
-      }
+      });
 
       // Remove event listeners if all images are loaded
       if (lazyImagesArray.length == 0) {
