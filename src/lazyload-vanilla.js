@@ -37,13 +37,17 @@
 
       for (let i = 0; i < lazyImagesArray.length; i++) {
         if (isImageInViewport(lazyImagesArray[i])) {
-          lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
+          if (lazyImagesArray[i].getAttribute('data-src') !== null) {
+            lazyImagesArray[i].setAttribute('src', lazyImagesArray[i].getAttribute('data-src'));
 
-          lazyImagesArray[i].removeAttribute('data-src');
+            lazyImagesArray[i].removeAttribute('data-src');
+          }
 
-          lazyImagesArray[i].setAttribute('srcset', lazyImagesArray[i].getAttribute('data-srcset'));
+          if (lazyImagesArray[i].getAttribute('data-srcset') !== null) {
+            lazyImagesArray[i].setAttribute('srcset', lazyImagesArray[i].getAttribute('data-srcset'));
 
-          lazyImagesArray[i].removeAttribute('data-srcset');
+            lazyImagesArray[i].removeAttribute('data-srcset');
+          }
 
           lazyImagesArray[i].setAttribute('data-loaded', true);
 
