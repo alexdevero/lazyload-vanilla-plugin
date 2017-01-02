@@ -1,5 +1,5 @@
 (() => {
-  const lazyImages = () => {
+  const lazyloadVanilla = () => {
     // Test if image is in the viewport
     const isImageInViewport = (img) => {
       let rect = img.getBoundingClientRect();
@@ -31,8 +31,8 @@
       }, 15);
     };
 
-    // lazyLoadImages function
-    const lazyLoadImages = () => {
+    // lazyloadVanilla function
+    const lazyloadVanillaLoader = () => {
       let lazyImagesArray = document.querySelectorAll('img[data-src]');
 
       for (let i = 0; i < lazyImagesArray.length; i++) {
@@ -57,25 +57,31 @@
 
       // Remove event listeners if all images are loaded
       if (lazyImagesArray.length == 0) {
-        window.removeEventListener('DOMContentLoaded', lazyLoadImages);
+        window.removeEventListener('DOMContentLoaded', lazyloadVanilla);
 
-        window.removeEventListener('load', lazyLoadImages);
+        window.removeEventListener('load', lazyloadVanillaLoader);
 
-        window.removeEventListener('resize', lazyLoadImages);
+        window.removeEventListener('resize', lazyloadVanillaLoader);
 
-        window.removeEventListener('scroll', lazyLoadImages);
+        window.removeEventListener('scroll', lazyloadVanillaLoader);
       }
     }
 
     // Add event listeners to images
-    window.addEventListener('DOMContentLoaded', lazyLoadImages);
+    window.addEventListener('DOMContentLoaded', lazyloadVanillaLoader);
 
-    window.addEventListener('load', lazyLoadImages);
+    window.addEventListener('load', lazyloadVanillaLoader);
 
-    window.addEventListener('resize', lazyLoadImages);
+    window.addEventListener('resize', lazyloadVanillaLoader);
 
-    window.addEventListener('scroll', lazyLoadImages);
+    window.addEventListener('scroll', lazyloadVanillaLoader);
   }
-
-  return lazyImages();
+  
+  // Test if JavaScript is available and allowed
+  if (document.querySelector('.no-js') !== null) {
+    document.querySelector('.no-js').classList.remove('no-js');
+  }
+  
+  // Initiate lazyloadVanilla plugin
+  return lazyloadVanilla();
 })();
