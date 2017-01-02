@@ -1,0 +1,47 @@
+{
+  "name": "lazyload-vanilla",
+  "version": "1.0.0",
+  "description": "Simple and powerfull script to load images as they enter the viewport. PLugin supports responsive images (srcset attribute).",
+  "engines": {
+    "node": "7.x",
+    "npm": "4.x"
+  },
+  "main": "dist/lazyload-vanilla.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lazy",
+    "load",
+    "responsive",
+    "images",
+    "picture",
+    "srcset",
+    "progressive",
+    "JPEG",
+    "performance",
+    "perfmatters",
+    "no-jquery",
+    "vanilla"
+  ],
+  "author": {
+    "name": "Alex Devero",
+    "url": "https://github.com/alexdevero"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdevero/lazyload-vanilla-plugin"
+  },
+  "bugs": {
+    "url": "https://github.com/alexdevero/lazyload-vanilla-plugin/issues"
+  },
+  "homepage": "https://github.com/alexdevero/lazyload-vanilla-plugin",
+  "devDependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "cssnano": "^3.9.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-sass": "^3.0.0"
+  }
+}
