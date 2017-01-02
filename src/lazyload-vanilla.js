@@ -56,7 +56,7 @@
       });
 
       // Remove event listeners if all images are loaded
-      if (lazyImagesArray.length == 0) {
+      if (document.querySelectorAll('img[data-src]').length === 0 && document.querySelectorAll('img[data-srcset]')) {
         window.removeEventListener('DOMContentLoaded', lazyloadVanilla);
 
         window.removeEventListener('load', lazyloadVanillaLoader);
