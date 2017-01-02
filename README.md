@@ -3,4 +3,4 @@ Lazyload plugin for images written in pure JavaScript that doesn't require jQuer
 
 ## Links:
 - Live demo on [CodePen](http://codepen.io/alexdevero/pen/Xprxrx)
-- Tutorial on [Alex Devero Blog](http://blog.alexdevero.com/)
+- Tutorial on [Alex Devero Blog](http://blog.alexdevero.com/simple-lazyload-javascript-plugin/)
