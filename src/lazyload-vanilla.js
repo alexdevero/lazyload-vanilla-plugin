@@ -2,7 +2,7 @@
   const lazyloadVanilla = () => {
     // Test if image is in the viewport
     const isImageInViewport = (img) => {
-      let rect = img.getBoundingClientRect();
+      const rect = img.getBoundingClientRect();
 
       return (
         rect.top >= 0 &&
@@ -18,7 +18,7 @@
 
       element.style.display = 'block';
 
-      let timer = setInterval(() => {
+      const timer = setInterval(() => {
         if (elementOpacity >= 1){
           clearInterval(timer);
         }
@@ -33,7 +33,7 @@
 
     // lazyloadVanilla function
     const lazyloadVanillaLoader = () => {
-      let lazyImagesArray = document.querySelectorAll('img[data-src]');
+      const lazyImagesArray = document.querySelectorAll('img[data-src]');
 
       lazyImagesArray.forEach((image) => {
         if (isImageInViewport(image)) {
