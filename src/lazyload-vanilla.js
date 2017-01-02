@@ -10,7 +10,7 @@
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
-    }
+    };
 
     // Create custom fading effect for showing images
     const fadeInCustom = (element) => {
@@ -65,7 +65,7 @@
 
         window.removeEventListener('scroll', lazyloadVanillaLoader);
       }
-    }
+    };
 
     // Add event listeners to images
     window.addEventListener('DOMContentLoaded', lazyloadVanillaLoader);
