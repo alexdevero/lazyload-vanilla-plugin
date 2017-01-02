@@ -33,9 +33,9 @@
 
     // lazyloadVanilla function
     const lazyloadVanillaLoader = () => {
-      const lazyImagesArray = document.querySelectorAll('img[data-src]');
+      const lazyImagesList = document.querySelectorAll('img[data-src]');
 
-      lazyImagesArray.forEach((image) => {
+      lazyImagesList.forEach((image) => {
         if (isImageInViewport(image)) {
           if (image.getAttribute('data-src') !== null) {
             image.setAttribute('src', image.getAttribute('data-src'));
