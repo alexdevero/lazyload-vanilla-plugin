@@ -38,10 +38,10 @@
   },
   "homepage": "https://github.com/alexdevero/lazyload-vanilla-plugin",
   "devDependencies": {
-    "babel-preset-latest": "^6.16.0",
-    "cssnano": "^3.9.1",
+    "babel-preset-latest": "^6.24.1",
+    "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-sass": "^3.0.0"
+    "gulp-sass": "^3.1.0"
   }
 }
