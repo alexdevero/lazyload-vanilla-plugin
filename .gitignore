@@ -1,0 +1,27 @@
+# Development folders & files #
+###############################
+.tmp/
+node_modules/
+
+# Log files #
+#############
+*.log
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Photoshop & Illustrator files #
+#################################
+*.ai
+*.eps
+*.psd
